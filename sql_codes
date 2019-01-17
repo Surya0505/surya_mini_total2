@@ -1,0 +1,32 @@
+create table Course_Master (Course_ID number(5) PRIMARY KEY,
+    Course_Name varchar2(50), No_Of_Days number(5));
+
+
+create table Employee_Master (Employee_ID number(5) PRIMARY KEY, 
+     Employee_Name varchar2(50), Password varchar2(20), Role varchar2(20));
+
+
+create table Training_Program (Training_Code number(5) PRIMARY KEY, 
+    Course_Code number(5) references Course_Master(Course_ID), 
+	Faculty_Code number(5) references Employee_Master(Employee_ID), 
+	Start_Date date, End_date date);
+
+
+create table Particpant_Enrollment (Training_Code number(5) references 
+	Training_Program (Training_Code) , Participant_ID number(5) PRIMARY KEY);
+
+
+create table Faculty_Skill (Faculty_ID number(5) references 
+	Employee_Master(Employee_ID),Skill_Set varchar2(200));
+
+
+create table Feedback_Master (Training_Code number(5) references Training_Program (Training_Code), 
+	Participant_ID number(5) references Particpant_Enrollment(Participant_ID), 
+	FB_Prs_Comm number(1), 
+	FB_Clrfy_dbts number(1), FB_TM number(1),
+	FB_Hnd_out number(1), FB_Hw_Sw_Ntwrk number(1), 
+	Comments varchar2(200), Suggestions varchar2(200));
+	
+create table users (User_Name varchar2(10), Password varchar2(20), Role varchar2(20));	
+
+
