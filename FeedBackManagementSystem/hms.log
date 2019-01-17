@@ -1,0 +1,4 @@
+2019-01-17-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-17-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-17-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-17-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
