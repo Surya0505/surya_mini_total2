@@ -10,8 +10,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.cg.mini.exceptions.FMSException;
+import com.cg.mini.model.CourseMasterModel;
+import com.cg.mini.model.EmployeeMasterModel;
 import com.cg.mini.model.FacultySkillModel;
 import com.cg.mini.model.Users;
+import com.cg.mini.service.FMSService;
 import com.cg.mini.utility.JDBCUtility;
 
 public class FMSDaoImpl implements FMSDao {
@@ -56,14 +59,56 @@ public class FMSDaoImpl implements FMSDao {
 		//List<FacultySkillModel> list = new ArrayList<FacultySkillModel>();
 		connection = JDBCUtility.getConnection();
 		//boolean flag = false;
+		List<EmployeeMasterModel> list1 =new ArrayList<EmployeeMasterModel>();
+		List<CourseMasterModel> list2 = new ArrayList<CourseMasterModel>();
+		
 		
 		try {
 			statement = connection.prepareStatement(QueryMapper.insertQuery);
 			statement.setInt(1, facultySkillModel.getFacultyId());
 			statement.setString(2, facultySkillModel.getSkillSet());
+			statement.executeUpdate();
+			
+			statement = connection.prepareStatement(QueryMapper.viewEmployeeQuery);
 			resultSet = statement.executeQuery();
-			resultSet.next();
+			while (resultSet.next()) {
+				int employeeID = resultSet.getInt("employee_id");
+				String employeeName = resultSet.getString("employee_name");
+				EmployeeMasterModel employeeMasterModel = new EmployeeMasterModel();
+				employeeMasterModel.setEmployeeId(employeeID);
+				employeeMasterModel.setEmployeeName(employeeName);
+				list1.add(employeeMasterModel);
+				
+			}
+			
+			System.out.println("\n ******Employee Master*****");
+			System.out.println("Employee ID"+"     "+ "Employee Name");
+			for (EmployeeMasterModel employeeMasterModel : list1) {
+				System.out.println(employeeMasterModel.getEmployeeId()+"     "+employeeMasterModel.getEmployeeName());
+			}
+			
+			statement = connection.prepareStatement(QueryMapper.viewCourseQuery);
+			resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				int courseId = resultSet.getInt("course_id");
+				String courseName = resultSet.getString("course_name");
+				int noOfDays = resultSet.getInt("no_of_days");
+				CourseMasterModel courseMasterModel = new CourseMasterModel();
+				courseMasterModel.setCourseId(courseId);
+				courseMasterModel.setCourseName(courseName);
+				courseMasterModel.setNoOfDays(noOfDays);
+				list2.add(courseMasterModel);
+				
+			}
+			
+			System.out.println("\n ******Course Master*****");
+			System.out.println("Course ID"+"     "+ "Course Name"+"    "+"No of Days");
+			for (CourseMasterModel courseMasterModel : list2) {
+				System.out.println(courseMasterModel.getCourseId()+"     "+courseMasterModel.getCourseName()+"     "+courseMasterModel.getNoOfDays());
+			}
+			
 		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new FMSException("Error occured");
 		} finally {
 			logger.info("in finally block");
