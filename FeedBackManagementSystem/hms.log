@@ -54,3 +54,43 @@
 2019-01-19-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
 2019-01-19-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
 2019-01-19-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-20-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed
+2019-01-22-main-INFO -com.cg.mini.dao.FMSDaoImpl:in finally block
+2019-01-22-main-INFO -com.cg.mini.dao.FMSDaoImpl:resultset closed
+2019-01-22-main-INFO -com.cg.mini.dao.FMSDaoImpl:statement closed
+2019-01-22-main-INFO -com.cg.mini.dao.FMSDaoImpl:connection closed

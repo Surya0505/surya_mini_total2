@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 import com.cg.mini.exceptions.FMSException;
 
-import com.cg.mini.model.FacultySkillModel;
+
+import com.cg.mini.model.MainModel;
 import com.cg.mini.service.FMSService;
 import com.cg.mini.service.FMSServiceImpl;
 
@@ -23,6 +24,8 @@ public class UiClass {
 			String password = scanner.nextLine();
 
 			FMSService service = new FMSServiceImpl();
+			MainModel mainModel = null;
+			int result;
 
 			result1 = service.validateFields(username, password);
 
@@ -37,7 +40,7 @@ public class UiClass {
 				switch (choice) {
 				case 1:
 
-					FacultySkillModel facultySkillModel = new FacultySkillModel();
+					mainModel = new MainModel();
 					int facultyId = 0;
 					boolean validateFlag = false;
 					do {
@@ -52,17 +55,35 @@ public class UiClass {
 					System.out.println("Enter Skills ");
 					String skillSet = scanner.nextLine();
 
-					facultySkillModel.setFacultyId(facultyId);
-					facultySkillModel.setSkillSet(skillSet);
+					mainModel.setFacultyId(facultyId);
+					mainModel.setSkillSet(skillSet);
 
-					int result = service
-							.addFacultySkillModel(facultySkillModel);
+					result = service.addFacultySkill(mainModel);
 					System.out.println(result + "inserted");
 
 					break;
 
 				case 2:
-
+					mainModel = new MainModel();
+					scanner.nextLine();
+/*					System.out.println("Enter course name");
+					String courseName = scanner.nextLine();
+					System.out.println("Enter Duration of courses");
+					int duration = scanner.nextInt();
+					
+					mainModel.setCourseName(courseName);
+					mainModel.setNoOfDays(duration);
+					result = service.addCourse(mainModel);
+					System.out.println(result+" Inserted");*/
+					
+					System.out.println("Enter the row you want to delete otherwise enter 0");
+					int row = scanner.nextInt();
+					if (row!=0) {
+						int output = service.deleteRow(row);
+						System.out.println(output+" Row Deleted");
+					}else {
+						System.out.println("Cancelled or input is wrong");
+					}
 					break;
 
 				case 3:
